@@ -5,7 +5,7 @@ const audioElement = document.getElementById("background-music");
 const startOverlay = document.getElementById("start-overlay");
 const fallingLeaves = document.getElementById("falling-leaves");
 
-const flowerCount = 220;
+const flowerCount = 150;
 const colors = [
   '#ff85c0', '#cc0000', '#3366cc',
   '#ffeb3b', '#f5f5f5', '#9933cc',
@@ -21,11 +21,11 @@ for (let i = 0; i < flowerCount; i++) {
   const flower = document.createElement("div");
   flower.className = "flower";
   const isMobile = window.innerWidth <= 768;
-  const baseSize = isMobile ? 2.4 + Math.random() * 4 : 5 + Math.random() * 8; // 3 * 0.8, 5 * 0.8
+  const baseSize = isMobile ? 1.5 + Math.random() * 2 : 5 + Math.random() * 8;
   flower.style.width = `${baseSize}px`;
   flower.style.height = `${baseSize}px`;
-  flower.style.left = `${300 + x * 16}px`;
-  flower.style.top = `${270 - y * 16}px`;
+  flower.style.left = `${isMobile ? 100 + x * 8 : 300 + x * 16}px`;
+  flower.style.top = `${isMobile ? 135 - y * 8 : 270 - y * 16}px`;
 
   const flowerColor = colors[Math.floor(Math.random() * colors.length)];
 
@@ -59,9 +59,8 @@ function createFallingFlower() {
   const flower = document.createElement('div');
   flower.classList.add('flower');
 
-  // Adjust baseSize for mobile screens
   const isMobile = window.innerWidth <= 768;
-  const baseSize = isMobile ? 1.2 + Math.random() * 2 : 5 + Math.random() * 10; // 1.5 * 0.8, 2.5 * 0.8
+  const baseSize = isMobile ? 0.8 + Math.random() * 1.2 : 5 + Math.random() * 10;
   flower.style.width = `${baseSize}px`;
   flower.style.height = `${baseSize}px`;
 
@@ -91,18 +90,18 @@ function createFallingFlower() {
 
   flower.appendChild(center);
   flower.style.left = `${Math.random() * 100}%`;
-  flower.style.top = `-30px`;
-  const animationDuration = 4 + Math.random() * 4; // 4s to 8s
+  flower.style.top = `-10px`;
+  const animationDuration = isMobile ? 3 + Math.random() * 2 : 4 + Math.random() * 4;
   flower.style.animation = `fallAndFly ${animationDuration}s ease-in-out forwards`;
-  flower.style.setProperty('--x-offset', `${(Math.random() - 0.5) * (isMobile ? 120 : 500)}px`); // 150 * 0.8
-  flower.style.setProperty('--rotate', `${Math.random() * 1080 - 540}deg`);
-  flower.style.transform = `translate(-50%, -50%) scale(${0.8 + Math.random() * 0.4})`;
+  flower.style.setProperty('--x-offset', `${(Math.random() - 0.5) * (isMobile ? 80 : 500)}px`);
+  flower.style.setProperty('--rotate', `${Math.random() * 720 - 360}deg`);
+  flower.style.transform = `translate(-50%, -50%) scale(${isMobile ? 0.4 + Math.random() * 0.2 : 0.8 + Math.random() * 0.4})`;
 
   fallingLeaves.appendChild(flower);
   flower.addEventListener('animationend', () => flower.remove());
 }
 
-setInterval(createFallingFlower, 300);
+setInterval(createFallingFlower, 400);
 
 const startDate = new Date('2025-04-09T00:00:00Z');
 function updateCounter() {
