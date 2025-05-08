@@ -47,7 +47,7 @@ body {
 .flower-center {
   position: absolute;
   border-radius: 50%;
-  transform:Tijdens translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
@@ -215,7 +215,7 @@ body {
   }
 
   #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.4);
   }
 
   .text-container {
@@ -263,19 +263,19 @@ body {
       opacity: 1;
     }
     25% {
-      transform: translateX(calc(var(--x-offset) * 0.5)) translateY(20vw) rotate(calc(var(--rotate) * 0.3)) scale(1.1);
+      transform: translateX(calc(var(--x-offset) * 0.5)) translateY(15vw) rotate(calc(var(--rotate) * 0.3)) scale(1.1);
       opacity: 0.8;
     }
     50% {
-      transform: translateX(calc(var(--x-offset) * -0.3)) translateY(40vw) rotate(calc(var(--rotate) * 0.6)) scale(0.9);
+      transform: translateX(calc(var(--x-offset) * -0.3)) translateY(30vw) rotate(calc(var(--rotate) * 0.6)) scale(0.9);
       opacity: 0.9;
     }
     75% {
-      transform: translateX(calc(var(--x-offset) * 0.2)) translateY(60vw) rotate(calc(var(--rotate) * 0.8)) scale(1.05);
+      transform: translateX(calc(var(--x-offset) * 0.2)) translateY(45vw) rotate(calc(var(--rotate) * 0.8)) scale(1.05);
       opacity: 0.7;
     }
     100% {
-      transform: translateX(var(--x-offset)) translateY(100vw) rotate(var(--rotate)) scale(0.8);
+      transform: translateX(var(--x-offset)) translateY(80vw) rotate(var(--rotate)) scale(0.8);
       opacity: 0;
     }
   }
@@ -289,7 +289,7 @@ body {
   }
 
   #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.3);
   }
 
   .text-container h1 {
