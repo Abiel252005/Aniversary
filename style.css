@@ -72,18 +72,6 @@ body {
     transform: translateX(0) translateY(0) rotate(0deg) scale(1);
     opacity: 1;
   }
-  25% {
-    transform: translateX(calc(var(--x-offset) * 0.5)) translateY(20vh) rotate(calc(var(--rotate) * 0.3)) scale(1.1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateX(calc(var(--x-offset) * -0.3)) translateY(40vh) rotate(calc(var(--rotate) * 0.6)) scale(0.9);
-    opacity: 0.9;
-  }
-  75% {
-    transform: translateX(calc(var(--x-offset) * 0.2)) translateY(60vh) rotate(calc(var(--rotate) * 0.8)) scale(1.05);
-    opacity: 0.7;
-  }
   100% {
     transform: translateX(var(--x-offset)) translateY(100vh) rotate(var(--rotate)) scale(0.8);
     opacity: 0;
@@ -209,72 +197,6 @@ body {
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .heart-container {
-    width: 200px;
-    height: 270px;
-    transform: scale(0.8);
-  }
-
-  .heart-container .flower {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-
-  #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-
-  .text-container {
-    margin-top: 10px;
-  }
-
-  .text-container h1 {
-    font-size: 20px;
-  }
-
-  .text-container p {
-    font-size: 12px;
-  }
-
-  #counter {
-    font-size: 10px;
-  }
-
-  .love-letter {
-    max-width: 300px;
-    margin-left: 50px;
-    left: 20px;
-  }
-
-  .love-letter h2 {
-    font-size: 18px;
-  }
-
-  .love-letter p {
-    font-size: 12px;
-  }
-
-  @keyframes moveHeart {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100px);
-    }
-  }
-
-  @keyframes fallAndFly {
-    0% {
-      transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(var(--x-offset)) translateY(100vh) rotate(var(--rotate)) scale(0.8);
-      opacity: 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) and (orientation: landscape) {
-  .heart-container {
     width: 150px;
     height: 202.5px;
     transform: scale(0.7);
@@ -286,6 +208,10 @@ body {
 
   #falling-leaves .flower {
     transform: translate(-50%, -50%) scale(0.4);
+  }
+
+  .text-container {
+    margin-top: 8px;
   }
 
   .text-container h1 {
@@ -301,15 +227,77 @@ body {
   }
 
   .love-letter {
-    max-width: 250px;
-    margin-left: 40px;
+    max-width: 200px;
+    margin-left: 30px;
+    left: 10px;
   }
 
   .love-letter h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .love-letter p {
     font-size: 10px;
+  }
+
+  @keyframes moveHeart {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(80px);
+    }
+  }
+
+  @keyframes fallAndFly {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(var(--x-offset)) translateY(100vh) rotate(var(--rotate)) scale(0.7);
+      opacity: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .heart-container {
+    width: 120px;
+    height: 162px;
+    transform: scale(0.6);
+  }
+
+  .heart-container .flower {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+
+  #falling-leaves .flower {
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  .text-container h1 {
+    font-size: 14px;
+  }
+
+  .text-container p {
+    font-size: 8px;
+  }
+
+  #counter {
+    font-size: 7px;
+  }
+
+  .love-letter {
+    max-width: 180px;
+    margin-left: 20px;
+  }
+
+  .love-letter h2 {
+    font-size: 12px;
+  }
+
+  .love-letter p {
+    font-size: 8px;
   }
 }
