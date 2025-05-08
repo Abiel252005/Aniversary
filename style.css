@@ -209,47 +209,47 @@ body {
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .heart-container {
-    width: 40vw;
-    height: 54vw;
-    transform: scale(0.6);
+    width: 32vw; /* 40vw * 0.8 */
+    height: 43.2vw; /* 54vw * 0.8 */
+    transform: scale(0.48); /* 0.6 * 0.8 */
   }
 
   .heart-container .flower {
-    transform: translate(-50%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.48); /* 0.6 * 0.8 */
   }
 
   #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, -50%) scale(0.24); /* 0.3 * 0.8 */
   }
 
   .text-container {
-    margin-top: 1.5vw;
+    margin-top: 1.2vw; /* 1.5vw * 0.8 */
   }
 
   .text-container h1 {
-    font-size: 3.5vw;
+    font-size: 2.8vw; /* 3.5vw * 0.8 */
   }
 
   .text-container p {
-    font-size: 2vw;
+    font-size: 1.6vw; /* 2vw * 0.8 */
   }
 
   #counter {
-    font-size: 1.5vw;
+    font-size: 1.2vw; /* 1.5vw * 0.8 */
   }
 
   .love-letter {
-    max-width: 30vw;
-    margin-left: 5vw;
-    left: 2vw;
+    max-width: 24vw; /* 30vw * 0.8 */
+    margin-left: 4vw; /* 5vw * 0.8 */
+    left: 1.6vw; /* 2vw * 0.8 */
   }
 
   .love-letter h2 {
-    font-size: 3vw;
+    font-size: 2.4vw; /* 3vw * 0.8 */
   }
 
   .love-letter p {
-    font-size: 2vw;
+    font-size: 1.6vw; /* 2vw * 0.8 */
   }
 
   @keyframes moveHeart {
@@ -257,7 +257,7 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(15vw);
+      transform: translateX(12vw); /* 15vw * 0.8 */
     }
   }
 
@@ -267,19 +267,19 @@ body {
       opacity: 1;
     }
     25% {
-      transform: translateX(calc(var(--x-offset) * 0.5)) translateY(10vw) rotate(calc(var(--rotate) * 0.3)) scale(1.1);
+      transform: translateX(calc(var(--x-offset) * 0.5)) translateY(8vw) rotate(calc(var(--rotate) * 0.3)) scale(1.1); /* 10vw * 0.8 */
       opacity: 0.8;
     }
     50% {
-      transform: translateX(calc(var(--x-offset) * -0.3)) translateY(20vw) rotate(calc(var(--rotate) * 0.6)) scale(0.9);
+      transform: translateX(calc(var(--x-offset) * -0.3)) translateY(16vw) rotate(calc(var(--rotate) * 0.6)) scale(0.9); /* 20vw * 0.8 */
       opacity: 0.9;
     }
     75% {
-      transform: translateX(calc(var(--x-offset) * 0.2)) translateY(30vw) rotate(calc(var(--rotate) * 0.8)) scale(1.05);
+      transform: translateX(calc(var(--x-offset) * 0.2)) translateY(24vw) rotate(calc(var(--rotate) * 0.8)) scale(1.05); /* 30vw * 0.8 */
       opacity: 0.7;
     }
     100% {
-      transform: translateX(var(--x-offset)) translateY(60vw) rotate(var(--rotate)) scale(0.8);
+      transform: translateX(var(--x-offset)) translateY(48vw) rotate(var(--rotate)) scale(0.8); /* 60vw * 0.8 */
       opacity: 0;
     }
   }
@@ -287,41 +287,41 @@ body {
 
 @media only screen and (max-width: 480px) and (orientation: landscape) {
   .heart-container {
-    width: 45vw;
-    height: 60.75vw;
-    transform: scale(0.5);
+    width: 36vw; /* 45vw * 0.8 */
+    height: 48.6vw; /* 60.75vw * 0.8 */
+    transform: scale(0.4); /* 0.5 * 0.8 */
   }
 
   .heart-container .flower {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.4); /* 0.5 * 0.8 */
   }
 
   #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.2);
+    transform: translate(-50%, -50%) scale(0.16); /* 0.2 * 0.8 */
   }
 
   .text-container h1 {
-    font-size: 4vw;
+    font-size: 3.2vw; /* 4vw * 0.8 */
   }
 
   .text-container p {
-    font-size: 2.2vw;
+    font-size: 1.76vw; /* 2.2vw * 0.8 */
   }
 
   #counter {
-    font-size: 1.8vw;
+    font-size: 1.44vw; /* 1.8vw * 0.8 */
   }
 
   .love-letter {
-    max-width: 35vw;
-    margin-left: 3vw;
+    max-width: 28vw; /* 35vw * 0.8 */
+    margin-left: 2.4vw; /* 3vw * 0.8 */
   }
 
   .love-letter h2 {
-    font-size: 3.5vw;
+    font-size: 2.8vw; /* 3.5vw * 0.8 */
   }
 
   .love-letter p {
-    font-size: 2.2vw;
+    font-size: 1.76vw; /* 2.2vw * 0.8 */
   }
 }

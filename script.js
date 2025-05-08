@@ -21,7 +21,7 @@ for (let i = 0; i < flowerCount; i++) {
   const flower = document.createElement("div");
   flower.className = "flower";
   const isMobile = window.innerWidth <= 768;
-  const baseSize = isMobile ? 3 + Math.random() * 5 : 5 + Math.random() * 8;
+  const baseSize = isMobile ? 2.4 + Math.random() * 4 : 5 + Math.random() * 8; // 3 * 0.8, 5 * 0.8
   flower.style.width = `${baseSize}px`;
   flower.style.height = `${baseSize}px`;
   flower.style.left = `${300 + x * 16}px`;
@@ -61,7 +61,7 @@ function createFallingFlower() {
 
   // Adjust baseSize for mobile screens
   const isMobile = window.innerWidth <= 768;
-  const baseSize = isMobile ? 1.5 + Math.random() * 2.5 : 5 + Math.random() * 10;
+  const baseSize = isMobile ? 1.2 + Math.random() * 2 : 5 + Math.random() * 10; // 1.5 * 0.8, 2.5 * 0.8
   flower.style.width = `${baseSize}px`;
   flower.style.height = `${baseSize}px`;
 
@@ -94,7 +94,7 @@ function createFallingFlower() {
   flower.style.top = `-30px`;
   const animationDuration = 4 + Math.random() * 4; // 4s to 8s
   flower.style.animation = `fallAndFly ${animationDuration}s ease-in-out forwards`;
-  flower.style.setProperty('--x-offset', `${(Math.random() - 0.5) * (isMobile ? 150 : 500)}px`); // Smaller range for mobile
+  flower.style.setProperty('--x-offset', `${(Math.random() - 0.5) * (isMobile ? 120 : 500)}px`); // 150 * 0.8
   flower.style.setProperty('--rotate', `${Math.random() * 1080 - 540}deg`);
   flower.style.transform = `translate(-50%, -50%) scale(${0.8 + Math.random() * 0.4})`;
 
