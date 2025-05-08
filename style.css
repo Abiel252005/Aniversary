@@ -23,8 +23,8 @@ body {
 
 .heart-container {
   position: relative;
-  width: 400px;
-  height: 540px;
+  width: 420px; /* aumentado un 10% */
+  height: 580px; /* aumentado un 10% */
   opacity: 1;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .flower {
   position: absolute;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1.1); /* aumentado */
   opacity: 1;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
@@ -92,57 +92,56 @@ body {
 
 .text-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 52%;
+  left: 44%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   opacity: 0;
-  margin-top: 20px;
 }
 
 .text-container h1 {
   font-family: 'Georgia', serif;
-  font-size: 36px;
+  font-size: 39.6px; /* aumentado */
   margin: 0;
   color: #ff85c0;
 }
 
 .text-container p {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 19.8px; /* aumentado */
+  margin: 5.5px 0;
   color: #f5f5f5;
 }
 
 #counter {
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 17.6px; /* aumentado */
+  margin-top: 11px;
   color: #ffeb3b;
 }
 
 .love-letter {
   position: absolute;
-  left: 50px;
+  left: 55px; /* aumentado */
   top: 50%;
   transform: translateY(-50%);
-  max-width: 500px;
+  max-width: 550px; /* aumentado */
   color: #fff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   opacity: 0;
-  margin-left: 75px;
+  margin-left: 82.5px; /* aumentado */
 }
 
 .love-letter h2 {
   font-family: 'Georgia', serif;
-  font-size: 30px;
+  font-size: 33px; /* aumentado */
   color: #ff85c0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   text-align: center;
 }
 
 .love-letter p {
-  font-size: 18px;
+  font-size: 19.8px; /* aumentado */
   line-height: 1.5;
   color: #f5f5f5;
   text-align: center;
@@ -153,7 +152,7 @@ body {
 .love-letter p::after {
   content: '|';
   position: absolute;
-  right: -10px;
+  right: -11px;
   top: 0;
   color: #ff85c0;
   animation: blink 0.7s infinite;
@@ -162,7 +161,7 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-50%) translateX(-50px);
+    transform: translateY(-50%) translateX(-55px);
   }
   100% {
     opacity: 1;
@@ -190,14 +189,15 @@ body {
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px; /* aumentado */
   z-index: 2000;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 22px; /* aumentado */
   box-sizing: border-box;
 }
 
+/* En modo portrait, ocultar todo excepto el aviso */
 @media only screen and (orientation: portrait) {
   #rotate-device {
     display: flex;
@@ -207,49 +207,50 @@ body {
   }
 }
 
+/* Dispositivos hasta 768px en modo landscape */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .heart-container {
-    width: 200px;
-    height: 270px;
-    transform: scale(0.8);
+    width: 220px;
+    height: 297px;
+    transform: scale(0.88);
   }
 
   .heart-container .flower {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.88);
   }
 
   #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.55);
   }
 
   .text-container {
-    margin-top: 10px;
+    margin-top: 11px;
   }
 
   .text-container h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .text-container p {
-    font-size: 12px;
+    font-size: 13.2px;
   }
 
   #counter {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .love-letter {
-    max-width: 300px;
-    margin-left: 50px;
-    left: 20px;
+    max-width: 330px;
+    margin-left: 55px;
+    left: 22px;
   }
 
   .love-letter h2 {
-    font-size: 18px;
+    font-size: 19.8px;
   }
 
   .love-letter p {
-    font-size: 12px;
+    font-size: 13.2px;
   }
 
   @keyframes moveHeart {
@@ -273,43 +274,44 @@ body {
   }
 }
 
+/* Dispositivos hasta 480px en modo landscape */
 @media only screen and (max-width: 480px) and (orientation: landscape) {
   .heart-container {
-    width: 150px;
-    height: 202.5px;
-    transform: scale(0.7);
+    width: 165px;
+    height: 222.75px;
+    transform: scale(0.77);
   }
 
   .heart-container .flower {
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.77);
   }
 
   #falling-leaves .flower {
-    transform: translate(-50%, -50%) scale(0.4);
+    transform: translate(-50%, -50%) scale(0.44);
   }
 
   .text-container h1 {
-    font-size: 16px;
+    font-size: 17.6px;
   }
 
   .text-container p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   #counter {
-    font-size: 8px;
+    font-size: 8.8px;
   }
 
   .love-letter {
-    max-width: 250px;
-    margin-left: 40px;
+    max-width: 275px;
+    margin-left: 44px;
   }
 
   .love-letter h2 {
-    font-size: 16px;
+    font-size: 17.6px;
   }
 
   .love-letter p {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
