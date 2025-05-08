@@ -47,7 +47,7 @@ body {
 .flower-center {
   position: absolute;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform:Tijdens translate(-50%, -50%);
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4), 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
@@ -214,8 +214,8 @@ body {
     transform: scale(0.8);
   }
 
-  .flower {
-    transform: translate(-50%, -50%) scale(0.8);
+  #falling-leaves .flower {
+    transform: translate(-50%, -50%) scale(0.6);
   }
 
   .text-container {
@@ -286,6 +286,10 @@ body {
     width: 60vw;
     height: 81vw;
     transform: scale(0.6);
+  }
+
+  #falling-leaves .flower {
+    transform: translate(-50%, -50%) scale(0.5);
   }
 
   .text-container h1 {
