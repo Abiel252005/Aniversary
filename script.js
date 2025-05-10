@@ -11,7 +11,7 @@ const colors = [
   '#ffeb3b', '#f5f5f5', '#9933cc',
 ];
 
-const loveLetterText = "Hace un mes, el 9 de abril, mi vida cambió, cuando te conocí hace más de un año nunca imaginé que llegariamos a crear todo esto y ahora que somos novios mi vida es muchísimo más alegre contigo. Nallely, eres la luz que ilumina mis días, la melodía que da ritmo a mi corazón. Cada momento contigo es un tesoro: tus risas, tus aabrazos, la forma en que me haces sentir completo. Mi amor por ti crece con cada latido, y no hay palabras suficientes para expresar cuánto te amo. Eres mi todo, mi razón para sonreír, y prometo cuidarte, respetarte y amarte con todo mi ser, hoy y siempre. Gracias por ser tú, mi amor eterno.";
+const loveLetterText = "Hace un mes, el 9 de abril, mi vida cambió, cuando te conocí hace más de un año nunca imaginé que llegariamos a crear todo esto y ahora que somos novios mi vida es muchísimo más alegre contigo. Nallely, eres la luz que ilumina mis días, la melodía que da ritmo a mi corazón. Cada momento contigo es un tesoro: tus risas, tus abrazos, la forma en que me haces sentir completo. Mi amor por ti crece con cada latido, y no hay palabras suficientes para expresar cuánto te amo. Eres mi todo, mi razón para sonreír, y prometo cuidarte, respetarte y amarte con todo mi ser, hoy y siempre. Gracias por ser tú, mi amor eterno.";
 
 for (let i = 0; i < flowerCount; i++) {
   const angle = ((i / flowerCount) * 2 * Math.PI) + (Math.PI / 2);
@@ -106,7 +106,8 @@ setInterval(createFallingFlower, 400);
 const startDate = new Date('2025-04-09T00:00:00Z');
 function updateCounter() {
   const now = new Date();
-  const diff = now - startDate;
+  const localStartDate = new Date(startDate.getTime() + (now.getTimezoneOffset() * 60 * 1000));
+  const diff = now.getTime() - localStartDate.getTime();
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
